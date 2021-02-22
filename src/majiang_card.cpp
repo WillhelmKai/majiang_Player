@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class majiang_card
+class Majiang_Card
 {
 public:
     char *hua_se, *shu_zi;
@@ -10,7 +10,7 @@ public:
     //status: to-be-drawed, on-hand, show for public
     int belong_to; // the No. of Player, default to be -1
 
-	majiang_card(char *hua_se, char *shu_zi)
+	Majiang_Card(char *hua_se, char *shu_zi)
     {
         this->hua_se = hua_se;
         this->shu_zi = shu_zi;
@@ -18,6 +18,6 @@ public:
         this->belong_to = -1;
 
     };
-	~majiang_card();
+	~Majiang_Card();
 	
 };
