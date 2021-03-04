@@ -1,11 +1,12 @@
 #include "majiang_card.cpp"
+# include <string>
 
 class a_Set_of_Majiang
 {
 private: 
-    const char *hua_se[3] = {"tiao","tong","wan"};
-    Majiang_Card* majiang; //the first pointer of set of majiang
-    int num_of_majiang_already_have = 0;
+    string hua_se[3] = {"tiao","tong","wan"};
+    //Majiang_Card* majiang; //the first pointer of set of majiang
+    int num_of_majiang_already_have;
 
 
 public:
@@ -15,9 +16,9 @@ public:
         {
             for(int i=1; i<10; i++)//every shuzi
             {
-                //cout<< this->hua_se[j] <<endl;
+                //cout<< this->hua_se[j]<< "   "<< i <<endl;
                 //have 4 card, create a 4 cards
-                this->majiang[num_of_majiang_already_have] = Majiang_Card(this->hua_se[j], i);
+                Majiang_Card mj(this->hua_se[j],i);
                 num_of_majiang_already_have++;
             }
         }
