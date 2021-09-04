@@ -3,6 +3,7 @@
 
 int main ()
 {
-    a_Set_of_Majiang majiang;
-    //Majiang_Card a("tiao", 1); 
+    a_Set_of_Majiang majiang = a_Set_of_Majiang() ;
+
+    majiang.wash_cards();
 }
