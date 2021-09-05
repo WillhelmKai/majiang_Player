@@ -2,7 +2,8 @@
 # include <vector>
 #include <algorithm> 
 #include "majiang_card.cpp"
-using namespace std;
+
+// using namespace std;
 
 
 class a_Set_of_Majiang
@@ -10,7 +11,7 @@ class a_Set_of_Majiang
 private: 
     //Majiang_Card* majiang; //the first pointer of set of majiang
     int num_of_majiang_already_have;
-    vector<Majiang_Card> cards;
+    std::vector<Majiang_Card> cards;
 
 
 
@@ -19,7 +20,7 @@ public:
     a_Set_of_Majiang()  : num_of_majiang_already_have(0)
     {
         //patterns cards have, remove this one and put them as an input variable
-        string hua_se[] = {"tiao","tong","wan"};
+        std::string hua_se[] = {"tiao","tong","wan"};
 
         //for each pattern, init a set of cards with nums
         for(int j=0; j< sizeof(hua_se)/sizeof(hua_se[0]) ;j++) //every hua_se
@@ -44,23 +45,23 @@ public:
 
     void wash_cards()
     {
-        random_shuffle( this->cards.begin(), this->cards.end() );
-        cout << "                     " << endl;
+        std::random_shuffle( this->cards.begin(), this->cards.end() );
+        std::cout << "                     " << std::endl;
         this->iterate_cards();
-    };
-
-    void get_a_card()
-    {
-
     };
 
     void iterate_cards()
     {
         for(int i = 0; i < this->cards.size(); i++)
             {
-                cout << this->cards[i].hua_se << "  "<< this->cards[i].shu_zi << endl;
+                std::cout << this->cards[i].hua_se << "  "<< this->cards[i].shu_zi << std::endl;
             };
       
+    };
+
+    void get_a_card()
+    {
+
     };
 
 };
