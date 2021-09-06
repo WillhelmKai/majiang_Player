@@ -1,8 +1,17 @@
-#include "a_game.cpp"
+#include "A_Game.cpp"
 
 
 
 int main ()
 {
-    a_game game = a_game(); 
+
+    std::vector<A_Player> players; 
+    A_Player judge = A_Player();
+    for (int i =0; i<4; i++)
+        {
+            players.push_back(A_Player());
+        };
+
+
+    A_Game game = A_Game();     
 }
