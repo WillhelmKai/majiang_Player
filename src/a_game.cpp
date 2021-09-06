@@ -1,4 +1,4 @@
-#include "a_player.cpp"
+#include "A_Player.cpp"
 #include "A_Set_of_Cards.cpp"
 
 
@@ -12,11 +12,13 @@ public:
 	{
 		this->cards = A_Set_of_Cards();
 		this->cards.wash();
-		std::vector<A_Card>  player_cards = this->cards.init_cards_for_a_player();
-		for(int i = 0; i < player_cards.size(); i++)
-			{
-				player_cards[i].print_this_card();
-			};
+
+		
+		// std::vector<A_Card>  player_cards = this->cards.init_cards_for_a_player();
+		// for(int i = 0; i < player_cards.size(); i++)
+		// 	{
+		// 		player_cards[i].print_this_card();
+		// 	};
 
 	};
 

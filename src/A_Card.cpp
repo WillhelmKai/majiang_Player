@@ -21,7 +21,7 @@ public:
 
     void print_this_card()
     {
-        std::cout << this->num << "  "<<  this->pattern<< std::endl;
+        std::cout << this->num << " "<<  this->pattern<< std::endl;
     };
 
 

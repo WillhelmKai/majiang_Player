@@ -1,7 +1,7 @@
-class a_player
+class A_Player
 {
 public:
-	a_player();
-	~a_player();
+	A_Player();
+	~A_Player();
 	
 };
