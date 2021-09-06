@@ -5,11 +5,12 @@
 class A_Card
 {
 private:
+
+public:
     std::string pattern;
 
     int num, series_num; // the No. of Player, default to be -1 (to be drawed)
 
-public:
 	A_Card(std::string pattern, int num,int series_num): pattern(pattern), num(num), series_num(series_num)
     {
 

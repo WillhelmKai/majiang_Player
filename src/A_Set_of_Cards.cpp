@@ -11,6 +11,7 @@ class A_Set_of_Cards
 private: 
     //Majiang_Card* majiang; //the first pointer of set of majiang
     std::vector<A_Card> cards;
+    std::vector<std::string> unique_patterns;
 
 
 public:
@@ -56,6 +57,7 @@ public:
             {
                 this->cards[i].print_this_card();
             };
+        std::cout<<" "<<std::endl;
       
     };
 
@@ -71,9 +73,16 @@ public:
     void add_a_card(A_Card card)
     {
         this->cards.push_back(card);
-        this->num_of_cards_left++;                            
+        this->num_of_cards_left++;
+
+        //update unique pattern                            
     };
 
+    //sort card by it's num having grouped by patterns
+    void sort()
+    {
+
+    };
 
 };
 
