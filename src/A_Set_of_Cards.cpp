@@ -99,6 +99,7 @@ public:
     //sort card by it's num having grouped by patterns
     void sort()
     {
+        std::vector<A_Card> cards_already_sorted;
         // for each unique pattern
         for (int i =0; i < this->unique_patterns.size() ; i ++)
         {
@@ -106,18 +107,26 @@ public:
             std::vector<A_Card> cards_to_be_sorted;
             for(int j = 0; j < this->cards.size(); j++)
             {
+                //select it's all card
                 if (curren_pattern == this->cards[j].pattern)
                 {
                     cards_to_be_sorted.push_back(this->cards[j]);
                 }
             };
-            // std::sort(cards_to_be_sorted.begin(), cards_to_be_sorted.end() );
+            std::sort(cards_to_be_sorted.begin(), cards_to_be_sorted.end());
+
+            // sort and put back
+            for(int j = 0; j < cards_to_be_sorted.size(); j++)
+            {
+                cards_already_sorted.push_back(cards_to_be_sorted[j]);
+            };
 
         };
-        //select it's all card
-
-        // sort and put back
+        this->cards.clear();
+        this->cards = cards_already_sorted;
     };
+
+
 
 };
 

@@ -35,6 +35,12 @@ public:
     			this->players[j].get_a_card( this->cards.pop_a_card() );	
     		};
         };  
+        this->players[0].cards_in_hands.sort();
+        this->players[1].cards_in_hands.sort();
+        this->players[2].cards_in_hands.sort();
+        this->players[3].cards_in_hands.sort();
+
+
         this->players[0].cards_in_hands.print_cards_left();
         this->players[1].cards_in_hands.print_cards_left();
         this->players[2].cards_in_hands.print_cards_left();
