@@ -34,17 +34,8 @@ public:
     		{
     			this->players[j].get_a_card( this->cards.pop_a_card() );	
     		};
-        };  
-        this->players[0].cards_in_hands.sort();
-        this->players[1].cards_in_hands.sort();
-        this->players[2].cards_in_hands.sort();
-        this->players[3].cards_in_hands.sort();
+        }; 
 
-
-        this->players[0].cards_in_hands.print_cards_left();
-        this->players[1].cards_in_hands.print_cards_left();
-        this->players[2].cards_in_hands.print_cards_left();
-        this->players[3].cards_in_hands.print_cards_left();
 	};
 
 	~A_Game()
@@ -54,8 +45,13 @@ public:
 
 	void game_start()
 	{
-	//while there is not one win and still have cards left
 
+    int id_for_next_player = 0;
+	//while there is not one win and still have cards left
+    while(this)
+    	{
+
+    	};
 
 	//in each round, 
 

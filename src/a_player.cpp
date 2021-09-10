@@ -22,6 +22,13 @@ public:
 	void get_a_card(A_Card card)
 	{
 		this->cards_in_hands.add_a_card(card);
+		this->cards_in_hands.sort();
+	};
+
+	void show_cards_in_hand()
+	{
+		this->cards_in_hands.print_cards_left();
+
 	};
 	
 };

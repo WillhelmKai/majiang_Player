@@ -31,7 +31,7 @@ public:
         return (this->num < str.num);
     }
 
-    bool operator > (const A_Card& str) const
+    bool greater (const A_Card& str) const
     {
         return (this->num > str.num);
     }
