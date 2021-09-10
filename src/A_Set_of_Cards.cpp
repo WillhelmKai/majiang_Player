@@ -1,5 +1,6 @@
 # include <string>
 # include <vector>
+# include <set>
 #include <algorithm> 
 #include "A_Card.cpp"
 
@@ -13,8 +14,21 @@ private:
     std::vector<A_Card> cards;
     std::vector<std::string> unique_patterns;
 
+    void update_unique_patterns()
+    {
+
+    for(int i = 0; i < this->cards.size(); i++)
+        {
+            this->unique_patterns.push_back( this->cards[i].pattern );
+        }; 
+
+    std::sort( this->unique_patterns.begin(), this->unique_patterns.end() );
+    this->unique_patterns.erase( std::unique( this->unique_patterns.begin(), this->unique_patterns.end() ), this->unique_patterns.end() );    
+        
+    };
 
 public:
+
     int num_of_cards_left;
     //init a set of card
     A_Set_of_Cards()  : num_of_cards_left(0)
@@ -66,6 +80,9 @@ public:
         this->num_of_cards_left --;
         A_Card card_to_be_returned = this->cards.back();
         this->cards.pop_back();
+
+        //update unique pattern
+        this->update_unique_patterns();
         return card_to_be_returned;
     };
 
@@ -75,13 +92,31 @@ public:
         this->cards.push_back(card);
         this->num_of_cards_left++;
 
-        //update unique pattern                            
+        //update unique pattern        
+        this->update_unique_patterns();                            
     };
 
     //sort card by it's num having grouped by patterns
     void sort()
     {
+        // for each unique pattern
+        for (int i =0; i < this->unique_patterns.size() ; i ++)
+        {
+            std::string curren_pattern = this->unique_patterns[i];
+            std::vector<A_Card> cards_to_be_sorted;
+            for(int j = 0; j < this->cards.size(); j++)
+            {
+                if (curren_pattern == this->cards[j].pattern)
+                {
+                    cards_to_be_sorted.push_back(this->cards[j]);
+                }
+            };
+            // std::sort(cards_to_be_sorted.begin(), cards_to_be_sorted.end() );
 
+        };
+        //select it's all card
+
+        // sort and put back
     };
 
 };
