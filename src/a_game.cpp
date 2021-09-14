@@ -34,7 +34,13 @@ public:
     		{
     			this->players[j].get_a_card( this->cards.pop_a_card() );	
     		};
-        }; 
+        };
+
+    	for(int j = 0; j < this->players.size(); j++)
+		{
+			this->players[j].put_just_drawed_card_into_hand_cards( );	
+			this->players[j].show_cards_in_hand( );
+		};         
 
 	};
 
@@ -47,23 +53,18 @@ public:
 	{
 
     int id_for_next_player = 0;
+
 	//while there is not one win and still have cards left
-    while(this)
+    while(this->cards.num_of_cards_left > 0)
     	{
-
-    	};
-
-	//in each round, 
-
 		//the next person draw a card
 
 		//take an action
 
-		//give a card
-
+		//no other players take an action, according to current 
 
 		//everybody take an action
-
+    	};
 
 	};
 
